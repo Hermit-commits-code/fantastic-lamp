@@ -1,0 +1,21 @@
+# Defines common settings for all environments
+default: &default # Uses the SQLite3 database adapter
+  adapter: sqlite3
+  # Sets the maximum number of simultaneous connections
+  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+  # Time in milliseconds to wait for a busy database
+  timeout: 5000
+
+# Configuration for your coding environment
+development:
+  # Inherits the default settings
+  <<: *default
+  # Location of the development database file
+  database: db/development.sqlite3
+
+# Configuration for running your tests
+test:
+  # Inherits the default settings
+  <<: *default
+  # Location of the test database file
+  database: db/test.sqlite3
