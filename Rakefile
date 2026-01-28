@@ -1,5 +1,8 @@
-# Add your own tasks in files placed in lib/tasks ending in .rake,
-# for example lib/tasks/capistrano.rake, and they will automatically be available to Rake.
+namespace :assets do
+  task :precompile do; puts "Skipping assets:precompile"; end
+  task :clean do; puts "Skipping assets:clean"; end
+  task :clobber do; puts "Skipping assets:clobber"; end
+end
 
 require_relative "config/application"
 
