@@ -1,13 +1,34 @@
 # Hermit Ledger
 
-## Purpose
+A high-precision accounting ledger application built with Ruby 3.4.1 and Rails 8.0.4.
 
-This is a manual, line-by-line build of a # Description of the project
-Ruby on Rails account ledger to master the framework. # Description continued #
+## Objectives
 
-## Structure
+- Precise transaction tracking and amount calculation.
+- Automated monthly rollover logic.
+- Loan and payment forecasting.
 
-- /app: Core application logic (Models, Views, Controllers) # Defining the app directory
-- /config: System and database configurations # Defining the config directory
-- /db: Database schema and migrations # Defining the database directory
-- /spec: Automated tests for business logic # Defining the test directory
+## Prerequisites
+
+- Ruby 3.4.1
+
+- SQLite 3.x
+
+## Setup Instructions
+
+1. Clone the repository.
+2. Run `bundle install` to install dependencies.
+3. Run `bin/rails db:prepare` to initialize the database.
+
+## Testing Strategy
+
+This project follows strict Test-Driven Development (TDD) using RSpec.
+
+- **Unit Tests:** Models and core accounting logic (calculations/rollovers) require 100% coverage.
+
+- **System Tests:** Critical user flows (adding transactions, viewing forecasts) are tested via Capybara.
+
+## Core Logic Specifications
+
+- **Double-Entry Principles:** Every transaction must maintain a balanced state across accounts.
+- **Rollover:** Monthly transitions will carry over balances and outstanding debts automatically.
