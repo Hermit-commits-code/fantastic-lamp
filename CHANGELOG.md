@@ -1,5 +1,11 @@
 # Changelog
 
+## [0.5.2] - 2026-01-28
+
+### Fixed
+
+- Corrected Flask factory invocation syntax in execution command.
+
 ## [0.5.0] - 2026-01-28
 
 ### Added
