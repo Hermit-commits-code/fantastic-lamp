@@ -1,5 +1,19 @@
 # Changelog
 
+## [0.5.0] - 2026-01-28
+
+### Added
+
+- Initial Flask Application factory setup.
+
+- Modernized Transaction model to use UTC timezone-aware dates.
+
+### Changed
+
+- Refactored tests to use Session.get() (SQLAlchemy 2.0 standard).
+
+- Automated database table creation on app startup.
+
 ## [0.4.1] - 2026-01-28
 
 ### Fixed

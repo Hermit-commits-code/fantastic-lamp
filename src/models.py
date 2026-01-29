@@ -1,4 +1,4 @@
-from datetime import datetime
+from datetime import datetime, timezone
 
 from flask_sqlalchemy import SQLAlchemy
 
@@ -12,7 +12,7 @@ class Transaction(db.Model):
     description = db.Column(db.String(200), nullable=False)
     amount = db.Column(db.Float, nullable=False)
     category = db.Column(db.String(100), nullable=False)
-    date = db.Column(db.Date, default=datetime.utcnow)
+    date = db.Column(db.Date, default=lambda: datetime.now(timezone.utc).date())
     status = db.Column(db.String(50), default="Pending")
     account_id = db.Column(db.Integer, db.ForeignKey("account.id"))
 
