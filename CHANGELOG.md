@@ -1,5 +1,15 @@
 # Changelog
 
+## [0.5.4] - 2026-01-28
+
+### Added
+
+- First JSON API endpoint (/api/status) to verify DB connectivity.
+
+### Fixed
+
+- Corrected route scope within the Application Factory function.
+
 ## [0.5.3] - 2026-01-28
 
 ### Fixed

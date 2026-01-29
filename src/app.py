@@ -15,4 +15,9 @@ def create_app():
         def index():
             return render_template("index.html")
 
+        @app.route("/api/status")
+        def status():
+            accounts_count = Account.query.count()
+            return jsonify({"status": "online", "accounts": accounts_count})
+
         return app
