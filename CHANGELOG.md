@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.3.0] - 2026-01-28
+
+### Added
+
+- Forecasting method for Account model to project future balances.
+- Fixed Transaction initialization to make 'status' optional.
+
 ## [0.2.0] - 2026-01-28
 
 ### Added

@@ -1,7 +1,7 @@
 # Defines the blueprint for our ledger entries
 class Transaction:
     # The constructor method that initializes a new transaction object.
-    def __init__(self, description, amount, category, date, status):
+    def __init__(self, description, amount, category, date, status="Pending"):
         # Assigns the description string to an object.
         self.description = description
         # Assigns numerical amount to the object
@@ -32,3 +32,9 @@ class Account:
         )
         self.balance_owed -= total_paid
         self.transactions = []
+
+    def forecast_balance(self, monthly_payment, months):
+        # Calculates the future balance based on a fixed monthly payment.
+        projected_balance = self.balance_owed - monthly_payment * months
+        # Returns the new balance, ensuring it doesn't drop below 0 (since you can't owe negative money on a loan).
+        return max(0, projected_balance)
