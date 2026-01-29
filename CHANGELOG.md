@@ -1,5 +1,15 @@
 # Changelog
 
+## [0.4.1] - 2026-01-28
+
+### Fixed
+
+- Corrected fixture discovery by adding tests/**init**.py.
+
+- Fixed import errors in test suite regarding app context.
+
+- Successfully integrated SQLAlchemy models with existing rollover and forecasting logic.
+
 ## [0.3.0] - 2026-01-28
 
 ### Added

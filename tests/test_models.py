@@ -22,3 +22,11 @@ def test_new_transaction():
     assert transaction.description == "Rent"
     # Verifies the numerical value is accurate.
     assert transaction.amount == 1200.00
+
+
+def test_transaction_repr():
+    # A __repr__ method is a best practice in 2026 for debugging; it tells Python how to print the object.
+    t = Transaction(
+        description="Coffee", amount=5.00, category="Food", date=date(2026, 1, 28)
+    )
+    assert repr(t) == "<Transaction Coffee: 5.0>"
