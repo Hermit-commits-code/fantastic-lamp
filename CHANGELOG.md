@@ -1,5 +1,11 @@
 # Changelog
 
+## [0.5.3] - 2026-01-28
+
+### Fixed
+
+- Added missing 'run' command to the Flask execution string.
+
 ## [0.5.2] - 2026-01-28
 
 ### Fixed
